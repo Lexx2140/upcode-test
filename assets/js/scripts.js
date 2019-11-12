@@ -19,6 +19,7 @@ $(function() {
 		loop:true,
 	    items: 1,
 	    nav: true,
+	    navText : ["",""],
 	    dots: true
 	});
 });
