@@ -1,72 +1,116 @@
-@import 'fonts.scss';
+// Normalize
+@import 'include/normalize.scss';
 
-*,
-::before,
-::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+// Fonts & variables
+@import 'include/variables.scss';
+
+// Header
+@import 'include/header.scss';
+
+// Offcanvas menu
+@import 'include/offmenu.scss';
+
+// Footer
+@import 'include/footer.scss';
+
+html, body {
+    font-family: $main-font;
+    scroll-behavior: smooth;
+    background: #888;
+    position: relative;
 }
 
-$accent-color: #00A031;
-$light-color: #fff;
-
-$font-family: Poppins;
-
-@import 'header.scss';
-
-body {
-    min-height: 100vh;
-    min-width: 320px;
+section {
+	min-height: 100vh;
 	position: relative;
-    font-family: $font-family;
 }
-
 .button {
-	background: $accent-color;
-	padding: 16px 23px;
-	color: $light-color;
+    padding: 16px 23px;
+    font-family: 'Gilroy-Bold';
+    font-weight: 900;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
 
-}
-
-
-.slider {
-    height: 100vh;
-
-    div {
-    	height: 100%;
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
-    	align-items: center;
-    	text-align: center;
-
-    	h1 {
-    		font-style: normal;
-    		font-weight: 600;
-    		font-size: 90px;
-    		line-height: 100px;
-    		color: $light-color;
-    	}
-
-    	p {
-    		font-style: normal;
-    		font-weight: 600;
-    		font-size: 18px;
-    		line-height: 32px;
-    		letter-spacing: 0.2px;
-    		color: $light-color;
-    	}
-
-
-    	&.image {
-    		background: url('../img/slider-1.jpg') no-repeat center center;
-    		background-size: cover;
-    	}
+    &.green-button {
+    	background: $accent-color;
+    	color: $light-color;
     }
 }
 
-footer {
-    height: 400px;
-    background: #888;
+.slider {
+	height: 100vh;
+	position: relative;
+
+    &>div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+        h1 {
+        	font-weight: 600;
+            font-size: 90px;
+            line-height: 100px;
+            color: $light-color;
+        }
+
+        p {
+        	font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.2px;
+            color: $light-color;
+        }
+
+
+        &.image {
+        	// height: 100vh;
+            background: #999 url('../img/slider-1.jpg') no-repeat center center;
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+    }
+}
+
+.contact {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&>div {
+		width: 60vw;
+		height: 60vh;
+		border: 2px solid black;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.list {
+		width: 30%;
+		height: 100%;
+		background-color: #fff;
+
+		h1 {
+			font-family: Poppins;
+			font-weight: 900;
+			font-size: 52px;
+			line-height: 115%;
+			color: #00A031;
+			margin-top: -1em;
+		}
+
+	}
+
+	.gmap {
+		width: 70%;
+		height: 100%;
+		background-color: green;
+	}
+
 }

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.woff');
+}
+// Colors
+$accent-color: #00A031;
+$light-color: #fff;
+$sec-color: #777;
+
+// Fonts
+$main-font: Poppins;
+$second-font: Gilroy;

@@ -3,50 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Upqode Task</title>
+    <title>UpQode Frontend Task</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
 </head>
 
 <body>
     <header>
-        <div class="top-logo">
-            <img src="assets/img/logo.svg">
-        </div>
+        <img class="top-logo" src="assets/img/upqode-logo.svg">
         <nav class="top-menu">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="off-menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
     <main>
-        <section class="slider">
-            <div class="image">
-                <h1>Mileage Made Simple</h1>
-                <p>Motivation And Your Personal Vision An Unbeatable Force</p>
-                <button class="green-button">Start Free Trial</button>
-            </div>
-        </section>
-        <section class="contacts">
-        </section>
-    </main>
-    <footer>
-    </footer>
+       <section id="home" class="slider">
+           <div class="image">
+               <h1>Mileage Made Simple</h1>
+               <p>Motivation And Your Personal Vision An Unbeatable Force</p>
+               <button class="button green-button">Start Free Trial</button>
+           </div>
+       </section>
+       <section id="contact" class="contact">
+           <div>
+               <div class="list">
+                   <h1>Meet us<br>in your city</h1>
+                   <p>2005 Stokes Isle Apt. 896, <br>Venaville, New York 10010</p>
+               </div>
+               <div id="myMap" class="gmap">
+               </div>
+           </div>
+       </section>
+   </main>
+   <footer>
+       <div class="footer-logo">
+           <img src="assets/img/upqode-logo.svg" alt="">
+       </div>
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#team">Team</a></li>
+           <li><a href="#contact">Contact Us</a></li>
+       </ul>
+       <p>© UpQode 2019.  All Right Reserved.</p>
+   </footer>
+
+   <!-- Offscreen menu -->
+   <div class="off-menu">
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#team">Team</a></li>
+           <li><a href="#contact">Contact Us</a></li>
+       </ul>
+   </div>
+   <!-- Offscreen menu toggle -->
+   <div id="offMenuToggle" class="burger">
+       <span></span>
+       <span></span>
+       <span></span>
+   </div>
+
+
+
+
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scripts.js"></script>
