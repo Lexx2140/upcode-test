@@ -607,6 +607,32 @@ section {
   color: #fff;
 }
 
+.slider {
+  height: 100vh;
+}
+
+.slider .custom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 50%;
+  z-index: 1000;
+}
+
+.slider .custom-nav > * {
+  cursor: pointer;
+}
+
+.slider .custom-nav .next {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
 .slider-item {
   height: 100vh;
   width: 100%;
@@ -645,16 +671,6 @@ section {
   bottom: 120px;
   left: 50%;
   transform: translate(-50%);
-}
-
-.owl-carousel .owl-theme .owl-nav {
-  position: absolute;
-  margin-top: 10px;
-  text-align: center;
-  top: 50%;
-  background: red;
-  width: 100px;
-  height: 100px;
 }
 
 .owl-theme .owl-dots .owl-dot span {

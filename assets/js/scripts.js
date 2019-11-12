@@ -15,11 +15,21 @@ function toggleMenu() {
 
 // Slider
 $(function() {
-	$(".owl-carousel").owlCarousel({
+	var slider = $(".owl-carousel");
+
+	slider.owlCarousel({
 		loop:true,
 	    items: 1,
 	    nav: true,
 	    navText : ["",""],
 	    dots: true
 	});
+
+	// Custom Navigation Events
+	$(".next").click(function(){
+	  slider.trigger('next.owl.carousel');
+	})
+	$(".prev").click(function(){
+	  slider.trigger('prev.owl.carousel');
+	})
 });
