@@ -394,7 +394,7 @@ header {
   position: fixed;
   height: 72px;
   margin: 0 auto;
-  z-index: 9999;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -443,7 +443,7 @@ header {
 
 .burger {
   display: flex;
-  z-index: 999;
+  z-index: 5;
   position: fixed;
   width: 30px;
   height: 30px;
@@ -489,9 +489,10 @@ header {
 }
 
 .off-menu {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
   display: block;
   position: fixed;
+  z-index: 4;
   top: 0;
   left: 100vw;
   width: 100vw;
@@ -514,6 +515,17 @@ header {
 .off-menu ul li {
   padding: 30px;
   font-size: 2em;
+}
+
+.off-menu ul li a {
+  text-decoration: none;
+  color: #777;
+  transition: color .3s ease;
+}
+
+.off-menu ul li a:hover,
+.off-menu ul li a.active {
+  color: #fff;
 }
 
 footer {
@@ -595,13 +607,8 @@ section {
   color: #fff;
 }
 
-.slider {
+.slider-item {
   height: 100vh;
-  position: relative;
-}
-
-.slider > div {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -610,14 +617,16 @@ section {
   text-align: center;
 }
 
-.slider > div h1 {
+.slider-item h1 {
   font-weight: 600;
   font-size: 90px;
   line-height: 100px;
   color: #fff;
+  margin-bottom: 5px;
 }
 
-.slider > div p {
+.slider-item p {
+  margin-bottom: 35px;
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
@@ -625,10 +634,21 @@ section {
   color: #fff;
 }
 
-.slider > div.image {
-  background: #999 url("../img/slider-1.jpg") no-repeat center center;
+.slider-item.image {
+  background: url("../img/slider-1.jpg") no-repeat center center, linear-gradient(to bottom, rgba(5, 13, 29, 0.5), rgba(5, 13, 29, 0));
   background-size: cover;
   background-blend-mode: multiply;
+}
+
+.owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
 }
 
 .contact {

@@ -1,6 +1,6 @@
 .burger {
     display: flex;
-    z-index: 999;
+    z-index: 5;
     // display: none;
     position: fixed;
     width: 30px;
@@ -48,15 +48,15 @@
 
 
 .off-menu {
-    // z-index: 9999;
     display: block;
     position: fixed;
+    z-index: 4;
     top: 0;
     left: 100vw;
     width: 100vw;
     height: 100vh;
     transition: transform .3s ease;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .95);
 
     &.visible {
         transform: translateX(-100vw);
@@ -72,6 +72,16 @@
         li {
             padding: 30px;
             font-size: 2em;
+            a {
+                text-decoration: none;
+                color: $sec-color;
+                transition: color .3s ease;
+
+                &:hover,
+                &.active {
+                    color: $light-color;
+                }
+            }
         }
     }
 }
