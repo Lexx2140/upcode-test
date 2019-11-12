@@ -615,21 +615,29 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1170px;
+  width: 1357px;
   margin: 0 auto;
   left: 0;
   right: 0;
   position: absolute;
   bottom: 50%;
-  z-index: 1000;
+  transform: translateY(50%);
+  z-index: 10;
 }
 
-.slider .custom-nav > * {
+.slider .custom-nav > div {
   cursor: pointer;
+}
+
+.slider .custom-nav > div svg {
+  fill: #fff;
+}
+
+.slider .custom-nav > div svg:hover path {
+  opacity: 1;
 }
 
 .slider .custom-nav .next {
-  cursor: pointer;
   transform: rotate(180deg);
 }
 
