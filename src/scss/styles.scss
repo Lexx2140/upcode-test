@@ -1,0 +1,72 @@
+@import 'fonts.scss';
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$accent-color: #00A031;
+$light-color: #fff;
+
+$font-family: Poppins;
+
+@import 'header.scss';
+
+body {
+    min-height: 100vh;
+    min-width: 320px;
+	position: relative;
+    font-family: $font-family;
+}
+
+.button {
+	background: $accent-color;
+	padding: 16px 23px;
+	color: $light-color;
+
+}
+
+
+.slider {
+    height: 100vh;
+
+    div {
+    	height: 100%;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+    	text-align: center;
+
+    	h1 {
+    		font-style: normal;
+    		font-weight: 600;
+    		font-size: 90px;
+    		line-height: 100px;
+    		color: $light-color;
+    	}
+
+    	p {
+    		font-style: normal;
+    		font-weight: 600;
+    		font-size: 18px;
+    		line-height: 32px;
+    		letter-spacing: 0.2px;
+    		color: $light-color;
+    	}
+
+
+    	&.image {
+    		background: url('../img/slider-1.jpg') no-repeat center center;
+    		background-size: cover;
+    	}
+    }
+}
+
+footer {
+    height: 400px;
+    background: #888;
+}
