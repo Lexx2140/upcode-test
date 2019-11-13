@@ -5,12 +5,61 @@
     align-items: center;
     justify-content: center;
 
-    &>div {
+    .contact_info {
         width: 1170px;
         height: 756px;
         margin: 190px auto;
         display: flex;
         flex-direction: row;
+        position: relative;
+
+        .map-legend {
+            box-sizing: border-box;
+            width: 321px;
+            min-height: 496px;
+            background: $light-color;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.0758039);
+            padding: 16px 60px 60px;
+
+            img {
+                float: left;
+                margin-right: 14px;
+            }
+
+            * {
+                color: #999;
+            }
+            h3 {
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 38px;
+                line-height: 134%;
+                letter-spacing: 0.4px;
+                margin-top: 27px;
+                margin-bottom:8px;
+                color: #1C201E;
+            }
+
+            h4 {
+                margin-bottom: 0;
+                color: #1C201E;
+            }
+
+            .black {
+                color: #1C201E;
+            }
+
+            a {
+                clear: left;
+                text-decoration: none;
+
+            }
+        }
     }
 
     .list {
@@ -19,14 +68,23 @@
         padding: 0;
         position: relative;
 
-        h1 {
+        h2 {
             font-family: Poppins;
             font-weight: 900;
             font-size: 52px;
             line-height: 115%;
             color: #00A031;
-            margin-top: -12px;
-            margin-left: -3px;
+            margin-top: -2%;
+            margin-left: -1%;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.2px;
+            color: #6C6C6C;
         }
 
         .list_item {
@@ -72,23 +130,16 @@
                 line-height: 156%;
                 letter-spacing: 0.2px;
             }
-
-            p {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 150%;
-                letter-spacing: 0.2px;
-                color: #6C6C6C;
-            }
         }
 
     }
 
     .gmap {
-        width: 70%;
+        width: 700px;
         height: 100%;
         background-color: green;
     }
+
+
 
 }

@@ -18,15 +18,24 @@ var initMap = (city) => {
 	// Set map options
 	let opts = {
 	    center: city,
-	    zoom: 12,
-	    gestureHandling: 'cooperative'
+	    zoom: 11,
+	    gestureHandling: 'cooperative',
+	    disableDefaultUI: true
 	}
 
 	// Init map
 	let myMap = new google.maps.Map(mapContainer, opts);
+
+	// Set marker image
+	let image = '/assets/img/marker.svg';
+
+	// Set marker
+	let myMarker = new google.maps.Marker({
+	    position: opts.center,
+	    map: myMap,
+	    icon: image
+	});
 }
-
-
 
 // Get siblings function
 var getSiblings = (elem) => {
