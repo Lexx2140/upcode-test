@@ -64,12 +64,9 @@ window.onscroll = (e) => {
 
         let href = item.firstElementChild.getAttribute('href');
         let activeSection = document.querySelector('section[id="' + href.slice(1) + '"]');
+        let offScreen = activeSection.offsetTop <= scrollTop && (activeSection.offsetTop + activeSection.clientHeight) > scrollTop;
 
-        if (activeSection.offsetTop <= scrollTop && (activeSection.offsetTop + activeSection.clientHeight) > scrollTop) {
-            item.classList.add('active');
-        } else {
-            item.classList.remove('active');
-        }
+        item.classList.toggle('active', offScreen);
     })
 
     // Apply darker header background
