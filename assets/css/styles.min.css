@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
 
 html {
   line-height: 1.15;
@@ -441,6 +441,207 @@ header {
   text-decoration: none;
 }
 
+.slider {
+  height: 100vh;
+}
+
+.slider .custom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1357px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 10;
+}
+
+.slider .custom-nav > div {
+  cursor: pointer;
+}
+
+.slider .custom-nav > div svg {
+  fill: #fff;
+}
+
+.slider .custom-nav > div svg:hover path {
+  opacity: 1;
+}
+
+.slider .custom-nav .next {
+  transform: rotate(180deg);
+}
+
+.slider-item {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slider-item h1 {
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 100px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.slider-item p {
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.slider-item.image {
+  background: url("../img/slider-1.jpg") no-repeat center center, linear-gradient(to bottom, rgba(5, 13, 29, 0.5), rgba(5, 13, 29, 0.2));
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.slider-item.video {
+  background: #000;
+}
+
+.owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #fff;
+  width: 13px;
+  height: 13px;
+  margin: 5px 7px;
+  display: block;
+  transition: all .3s ease;
+  border-radius: 30px;
+  outline: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #00A031;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+}
+
+.owl-theme .owl-dots .owl-dot.active span::before,
+.owl-theme .owl-dots .owl-dot:hover span::before {
+  background: transparent;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00A031;
+  border-radius: 50%;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact > div {
+  width: 1170px;
+  height: 756px;
+  margin: 190px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .list {
+  width: 360px;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.contact .list h1 {
+  font: 900 52px/115% Poppins;
+  color: #00A031;
+  margin-top: -12px;
+  margin-left: -3px;
+}
+
+.contact .list .list_item {
+  display: flex;
+  flex-direction: row;
+  width: 290px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.contact .list .list_item.active {
+  background: #fff;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
+  cursor: none;
+  pointer-events: none;
+}
+
+.contact .list .list_item.active svg {
+  fill: #00A031;
+}
+
+.contact .list .list_item_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58px;
+  padding-top: 20px;
+}
+
+.contact .list .list_item_img svg {
+  width: 25px;
+  height: 25px;
+  fill: #bbb;
+}
+
+.contact .list .list_item_desc {
+  width: 70%;
+}
+
+.contact .list .list_item_desc h3 {
+  color: #00A031;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.2px;
+}
+
+.contact .list .list_item_desc p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #6C6C6C;
+}
+
+.contact .gmap {
+  background: green;
+  width: 70%;
+  height: 100%;
+}
+
 .burger {
   display: flex;
   z-index: 5;
@@ -584,8 +785,9 @@ html,
 body {
   font-family: Poppins;
   scroll-behavior: smooth;
-  background: #888;
+  background: #E5E5E5;
   position: relative;
+  color: #6C6C6C;
 }
 
 section {
@@ -605,146 +807,5 @@ section {
 .button.green-button {
   background: #00A031;
   color: #fff;
-}
-
-.slider {
-  height: 100vh;
-}
-
-.slider .custom-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1357px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
-  z-index: 10;
-}
-
-.slider .custom-nav > div {
-  cursor: pointer;
-}
-
-.slider .custom-nav > div svg {
-  fill: #fff;
-}
-
-.slider .custom-nav > div svg:hover path {
-  opacity: 1;
-}
-
-.slider .custom-nav .next {
-  transform: rotate(180deg);
-}
-
-.slider-item {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.slider-item h1 {
-  font-weight: 600;
-  font-size: 90px;
-  line-height: 100px;
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.slider-item p {
-  margin-bottom: 35px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 32px;
-  letter-spacing: 0.2px;
-  color: #fff;
-}
-
-.slider-item.image {
-  background: url("../img/slider-1.jpg") no-repeat center center, linear-gradient(to bottom, rgba(5, 13, 29, 0.5), rgba(5, 13, 29, 0.2));
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-
-.owl-carousel .owl-dots {
-  position: absolute;
-  bottom: 120px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  background: #fff;
-  width: 13px;
-  height: 13px;
-  margin: 5px 7px;
-  display: block;
-  transition: all .3s ease;
-  border-radius: 30px;
-  outline: none;
-}
-
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-  background: #00A031;
-  position: relative;
-  width: 13px;
-  height: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all .3s ease;
-}
-
-.owl-theme .owl-dots .owl-dot.active span::before,
-.owl-theme .owl-dots .owl-dot:hover span::before {
-  background: transparent;
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #00A031;
-  border-radius: 50%;
-}
-
-.contact {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact > div {
-  width: 60vw;
-  height: 60vh;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: row;
-}
-
-.contact .list {
-  background: #fff;
-  width: 30%;
-  height: 100%;
-}
-
-.contact .list h1 {
-  font: 900 52px/115% Poppins;
-  color: #00A031;
-  margin-top: -1em;
-}
-
-.contact .gmap {
-  background: green;
-  width: 70%;
-  height: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
