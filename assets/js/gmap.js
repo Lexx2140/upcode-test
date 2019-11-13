@@ -129,38 +129,12 @@ var initMap = (city) => {
     });
 }
 
-// Get siblings function
-var getSiblings = (elem) => {
-
-    var siblings = [];
-    var sibling = elem.parentNode.firstChild;
-
-    while (sibling) {
-        if (sibling.nodeType === 1 && sibling !== elem) {
-            siblings.push(sibling);
-        }
-        sibling = sibling.nextSibling
-    }
-    return siblings;
-}
-
 // Set triggers
 window.onload = () => {
-    let mapTrigger = document.querySelectorAll('.list_item');
-
-    mapTrigger.forEach((item, index) => {
+    document.querySelectorAll('.list_item').forEach((item, index) => {
         item.addEventListener('click', e => {
-
-            let itemSiblings = getSiblings(item);
-
-            itemSiblings.forEach((sib) => {
-                sib.classList.remove('active');
-            });
-
-            item.classList.add('active');
-            let cityName = item.getAttribute('data-map');
-
-            initMap(cityName);
+            changeActiveState(item);
+            initMap(item.getAttribute('data-map'));
         });
     })
 }

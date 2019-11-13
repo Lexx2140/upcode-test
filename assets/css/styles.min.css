@@ -390,15 +390,24 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  width: 1170px;
   position: fixed;
   height: 72px;
-  margin: 0 auto;
   z-index: 2;
+  transition: all .3s ease;
+}
+
+header.darken {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header > div {
+  max-width: 61%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .top-logo {
@@ -406,10 +415,24 @@ header {
   width: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .top-logo {
+    position: fixed;
+    left: 30px;
+    top: 20px;
+  }
+}
+
 .top-menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .top-menu {
+    display: none;
+  }
 }
 
 .top-menu ul {
@@ -449,14 +472,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1357px;
+  width: 85%;
   margin: 0 auto;
   left: 0;
   right: 0;
   position: absolute;
   bottom: 50%;
   transform: translateY(50%);
-  z-index: 10;
+  z-index: 3;
 }
 
 .slider .custom-nav > div {
@@ -644,6 +667,10 @@ header {
   transition: all .3s ease;
 }
 
+.contact .list .list_item:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.0758039);
+}
+
 .contact .list .list_item.active {
   background: #fff;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
@@ -682,14 +709,13 @@ header {
 }
 
 .contact .gmap {
-  background: green;
   width: 700px;
   height: 100%;
 }
 
 .burger {
-  display: flex;
-  z-index: 5;
+  display: hidden;
+  z-index: 10;
   position: fixed;
   width: 30px;
   height: 30px;
@@ -699,6 +725,12 @@ header {
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .burger {
+    display: flex;
+  }
 }
 
 .burger span {
@@ -738,28 +770,32 @@ header {
   background: rgba(0, 0, 0, 0.95);
   display: block;
   position: fixed;
-  z-index: 4;
+  z-index: 9;
   top: 0;
-  left: 100vw;
-  width: 100vw;
-  height: 100vh;
+  left: 100%;
+  height: 100%;
+  width: 100%;
   transition: transform .3s ease;
 }
 
 .off-menu.visible {
-  transform: translateX(-100vw);
+  transform: translateX(-100%);
 }
 
 .off-menu ul {
+  list-style: none;
+  box-sizing: border-box;
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: -40px;
+  text-align: center;
 }
 
 .off-menu ul li {
-  padding: 30px;
+  padding: 30px 0;
   font-size: 2em;
 }
 
@@ -829,10 +865,11 @@ footer .footer-logo {
 html,
 body {
   font-family: Poppins;
-  scroll-behavior: smooth;
   background: #E5E5E5;
   position: relative;
   color: #6C6C6C;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 section {
@@ -852,5 +889,16 @@ section {
 .button.green-button {
   background: #00A031;
   color: #fff;
+}
+
+.services,
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  background: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

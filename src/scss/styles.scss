@@ -13,7 +13,6 @@
 // Contacts screen
 @import 'include/contacts.scss';
 
-
 // Offcanvas menu
 @import 'include/offmenu.scss';
 
@@ -23,10 +22,11 @@
 html,
 body {
     font-family: $main-font;
-    scroll-behavior: smooth;
     background: #E5E5E5;
     position: relative;
     color: #6C6C6C;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 section {
@@ -48,4 +48,13 @@ section {
     }
 }
 
+.services,
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.team {
+    background: #fff;
+}
