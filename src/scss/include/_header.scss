@@ -27,7 +27,7 @@ header {
     height: 30px;
     width: auto;
 
-    @media screen and (max-width: 1024px) {
+    @include lg {
         position: fixed;
         left: 30px;
         top: 20px;

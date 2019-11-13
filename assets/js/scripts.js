@@ -3,13 +3,49 @@ let header = document.querySelector('header');
 let menu = document.querySelector('.top-menu');
 let menuItems = menu.querySelectorAll('li');
 let offMenu = document.querySelector('.off-menu');
+let offMenuItems = offMenu.querySelectorAll('a');
 let burger = document.querySelector('#offMenuToggle');
 
-// Toggle Ofcanvas menu
-burger.addEventListener('click', e => {
+let toggleOffMenu = () => {
     offMenu.classList.toggle('visible');
     burger.classList.toggle('open');
-});
+}
+
+// Get siblings function
+let getSiblings = (elem) => {
+
+    var siblings = [];
+    var sibling = elem.parentNode.firstChild;
+
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== elem) {
+            siblings.push(sibling);
+        }
+        sibling = sibling.nextSibling
+    }
+    return siblings;
+}
+
+// Toggle active state for elements
+let changeActiveState = (item) => {
+    let itemSiblings = getSiblings(item);
+
+    itemSiblings.forEach((sib) => {
+        sib.classList.remove('active');
+    });
+
+    item.classList.add('active');
+}
+
+// Toggle Ofcanvas menu
+burger.addEventListener('click', e => toggleOffMenu());
+
+// Toggle off menu on click on menu item
+offMenuItems.forEach((item) => {
+    item.addEventListener('click', e => {
+        setTimeout(() => toggleOffMenu(), 800)
+    });
+})
 
 // Toggle active menu item on click
 menuItems.forEach((item) => {
@@ -37,38 +73,10 @@ window.onscroll = (e) => {
     })
 
     // Apply darker header background
-    if (scrollTop > header.clientHeight) {
-        header.classList.add('darken');
-    } else {
-        header.classList.remove('darken');
-    }
+    header.classList.toggle('darken', (scrollTop > header.clientHeight));
 }
 
-// Get siblings function
-var getSiblings = (elem) => {
 
-    var siblings = [];
-    var sibling = elem.parentNode.firstChild;
-
-    while (sibling) {
-        if (sibling.nodeType === 1 && sibling !== elem) {
-            siblings.push(sibling);
-        }
-        sibling = sibling.nextSibling
-    }
-    return siblings;
-}
-
-// Toggle active state for elements
-function changeActiveState(item) {
-    let itemSiblings = getSiblings(item);
-
-    itemSiblings.forEach((sib) => {
-        sib.classList.remove('active');
-    });
-
-    item.classList.add('active');
-}
 
 
 // Slider

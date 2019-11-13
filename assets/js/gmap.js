@@ -129,7 +129,7 @@ var initMap = (city) => {
     });
 }
 
-// Set triggers
+// Set map triggers
 window.onload = () => {
     document.querySelectorAll('.list_item').forEach((item, index) => {
         item.addEventListener('click', e => {

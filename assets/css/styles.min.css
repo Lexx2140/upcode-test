@@ -415,7 +415,7 @@ header > div {
   width: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 992px) {
   .top-logo {
     position: fixed;
     left: 30px;
@@ -511,9 +511,21 @@ header > div {
 .slider-item h1 {
   font-weight: 600;
   font-size: 90px;
-  line-height: 100px;
+  line-height: 111%;
   color: #fff;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-item h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .slider-item h1 {
+    font-size: 60px;
+  }
 }
 
 .slider-item p {
