@@ -16,8 +16,10 @@
         transform: translateY(50%);
         z-index: 3;
 
-        &>div {
+        &>button {
             cursor: pointer;
+            background: none;
+            border: none;
 
             svg {
                 fill: $light-color;

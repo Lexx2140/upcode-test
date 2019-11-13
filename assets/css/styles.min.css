@@ -482,15 +482,17 @@ header > div {
   z-index: 3;
 }
 
-.slider .custom-nav > div {
+.slider .custom-nav > button {
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
-.slider .custom-nav > div svg {
+.slider .custom-nav > button svg {
   fill: #fff;
 }
 
-.slider .custom-nav > div svg:hover path {
+.slider .custom-nav > button svg:hover path {
   opacity: 1;
 }
 
