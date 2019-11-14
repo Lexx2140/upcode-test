@@ -17,7 +17,8 @@ function onYouTubeIframeAPIReady() {
          autoplay: 1,
          controls: 0,
          host: 'https://www.youtube.com',
-         modestbranding: 1
+         modestbranding: 1,
+         rel: 0
         },
 
         events: {
