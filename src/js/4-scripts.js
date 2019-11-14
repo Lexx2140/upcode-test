@@ -73,12 +73,9 @@ window.onscroll = (e) => {
     header.classList.toggle('darken', (scrollTop > header.clientHeight));
 
 
-    // // Stop video player
-    // var videoPlayer =
+    // Pause/play video player
+    playPauseVideoOnScroll(scrollTop);
 }
-
-
-
 
 // Slider
 $(function() {
@@ -89,7 +86,8 @@ $(function() {
         items: 1,
         nav: true,
         navText: ["", ""],
-        dots: true
+        dots: true,
+        onTranslated: playPauseVideoOnSlide
     });
 
     // Custom Navigation Events
@@ -100,3 +98,5 @@ $(function() {
         slider.trigger('prev.owl.carousel');
     })
 });
+
+

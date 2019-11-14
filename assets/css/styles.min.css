@@ -497,12 +497,11 @@ header > div {
 }
 
 .slider .custom-nav .next {
-  transform: rotate(180deg);
+  transform: scale(-1, 1);
 }
 
 .slider-item {
   height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,19 +546,20 @@ header > div {
 
 .slider-item.video {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  transition: all .2s ease;
 }
 
 .slider-item.video .yt-player {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: calc(100vw + 200px);
+  height: calc(100vh + 200px);
+  top: 50%;
+  left: 50%;
   z-index: -1;
-  margin: auto;
+  transform: translate(-50%, -50%);
 }
 
 .owl-carousel .owl-dots {
@@ -597,8 +597,8 @@ header > div {
   background: transparent;
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   border: 1px solid #00A031;
   border-radius: 50%;
 }
