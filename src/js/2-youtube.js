@@ -11,18 +11,20 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('ytPlayer', {
         height: '1920',
         width: '1050',
-        videoId: 'hUjUhZ1Yy7Y',
+        videoId: 'NLjbT9K9TOg',
+        playerVars: {
+          'enablejsapi': 1,
+          'autoplay': 1,
+          'controls': 0
+          // 'host': 'https://www.youtube.com'
+        },
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
-        },
-        enablejsapi: 1,
-        autoplay: 1,
-        controls: 0
+        }
     });
 }
 
-// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
     event.target.playVideo();
 }
