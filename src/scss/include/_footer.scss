@@ -18,18 +18,27 @@ footer {
         display: flex;
         font-family: $second-font;
         font-size: 16px;
-        line-height: 16px;
         letter-spacing: 3px;
         text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+        }
 
         li a {
-            margin: 10px;
+            margin: 40px;
             text-decoration: none;
             color: $sec-color;
             transition: color .3s ease;
 
             &:hover {
             	color: $light-color;
+            }
+
+            @media screen and (max-width: 960px) {
+                margin: 100px 0;
             }
         }
     }
@@ -41,7 +50,6 @@ footer {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        line-height: 24px;
         letter-spacing: 0.2px;
     }
 

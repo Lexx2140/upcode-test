@@ -860,16 +860,8 @@ header > div {
   border-radius: 50%;
 }
 
-.contact {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .contact .contact_info {
   width: 1170px;
-  height: 756px;
   margin: 190px auto;
   display: flex;
   flex-direction: row;
@@ -878,15 +870,122 @@ header > div {
 
 @media screen and (max-width: 1200px) {
   .contact .contact_info {
-    max-width: 100%;
-    margin: 80px 30px;
+    width: 100%;
+    flex-wrap: wrap;
   }
+}
+
+.contact .contact_info .list {
+  width: 360px;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .contact_info .list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact .contact_info .list {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+.contact .contact_info .list h2 {
+  font: 900 52px/115% Poppins;
+  color: #00A031;
+  margin-top: -2%;
+  margin-left: -1%;
+}
+
+@media screen and (max-width: 960px) {
+  .contact .contact_info .list h2 {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.contact .contact_info .list p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #6C6C6C;
+}
+
+@media screen and (max-width: 960px) {
+  .contact .contact_info .list p {
+    width: 100%;
+  }
+}
+
+.contact .contact_info .list .list_item {
+  display: flex;
+  flex-direction: row;
+  width: 290px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  .contact .contact_info .list .list_item {
+    width: 100%;
+  }
+}
+
+.contact .contact_info .list .list_item:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.0758039);
+}
+
+.contact .contact_info .list .list_item.active {
+  background: #fff;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
+  cursor: none;
+  pointer-events: none;
+}
+
+.contact .contact_info .list .list_item.active svg {
+  fill: #00A031;
+}
+
+.contact .contact_info .list .list_item_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58px;
+  padding-top: 20px;
+}
+
+.contact .contact_info .list .list_item_img svg {
+  width: 25px;
+  height: 25px;
+  fill: #bbb;
+}
+
+.contact .contact_info .list .list_item_desc {
+  width: 70%;
+}
+
+.contact .contact_info .list .list_item_desc h3 {
+  color: #00A031;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.2px;
 }
 
 .contact .contact_info .map-legend {
   box-sizing: border-box;
   width: 321px;
-  min-height: 496px;
   background: #fff;
   position: absolute;
   right: 0;
@@ -894,6 +993,26 @@ header > div {
   transform: translate(0, -50%);
   box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.0758039);
   padding: 16px 60px 60px;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .contact_info .map-legend {
+    box-shadow: none;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    top: 0;
+    transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact .contact_info .map-legend {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
 }
 
 .contact .contact_info .map-legend img {
@@ -927,81 +1046,22 @@ header > div {
   text-decoration: none;
 }
 
-.contact .list {
-  width: 360px;
-  height: 100%;
-  padding: 0;
-  position: relative;
-}
-
-.contact .list h2 {
-  font: 900 52px/115% Poppins;
-  color: #00A031;
-  margin-top: -2%;
-  margin-left: -1%;
-}
-
-.contact .list p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.2px;
-  color: #6C6C6C;
-}
-
-.contact .list .list_item {
-  display: flex;
-  flex-direction: row;
-  width: 290px;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.contact .list .list_item:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.0758039);
-}
-
-.contact .list .list_item.active {
-  background: #fff;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
-  cursor: none;
-  pointer-events: none;
-}
-
-.contact .list .list_item.active svg {
-  fill: #00A031;
-}
-
-.contact .list .list_item_img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 58px;
-  padding-top: 20px;
-}
-
-.contact .list .list_item_img svg {
-  width: 25px;
-  height: 25px;
-  fill: #bbb;
-}
-
-.contact .list .list_item_desc {
-  width: 70%;
-}
-
-.contact .list .list_item_desc h3 {
-  color: #00A031;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 156%;
-  letter-spacing: 0.2px;
-}
-
 .contact .gmap {
   width: 700px;
-  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .gmap {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact .gmap {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
 }
 
 .burger {
@@ -1115,17 +1175,25 @@ footer {
 
 footer ul {
   list-style: none;
-  font: 16px/16px Gilroy;
+  font: 16px Gilroy;
   position: absolute;
   height: 16px;
   top: calc(50% - 16px/2 + 24px);
   display: flex;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+  footer ul {
+    flex-direction: column;
+  }
 }
 
 footer ul li a {
-  margin: 10px;
+  margin: 40px;
   text-decoration: none;
   color: #777;
   transition: color .3s ease;
@@ -1135,6 +1203,12 @@ footer ul li a:hover {
   color: #fff;
 }
 
+@media screen and (max-width: 960px) {
+  footer ul li a {
+    margin: 100px 0;
+  }
+}
+
 footer p {
   position: absolute;
   height: 24px;
@@ -1142,7 +1216,6 @@ footer p {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
   letter-spacing: 0.2px;
 }
 
