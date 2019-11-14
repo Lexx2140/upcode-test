@@ -13,6 +13,11 @@
         flex-direction: row;
         position: relative;
 
+        @media screen and (max-width: 1200px) {
+            max-width: 100%;
+            margin: 80px 30px;
+        }
+
         .map-legend {
             box-sizing: border-box;
             width: 321px;

@@ -21,51 +21,51 @@ $second-font: Gilroy;
 // Media queries
 
 
-// Small tablets and large smartphones (landscape view)
-$sm-max: 320px;
+// // Small tablets and large smartphones (landscape view)
+// $sm-max: 320px;
 
-// Small tablets (portrait view)
-$md-max: 768px;
+// // Small tablets (portrait view)
+// $md-max: 768px;
 
-// Tablets and small desktops
-$lg-max: 992px;
+// // Tablets and small desktops
+// $lg-max: 992px;
 
-// Large tablets and desktops
-$xl-max: 1024px;
+// // Large tablets and desktops
+// $xl-max: 1024px;
 
 
 
-// Small devices
-@mixin sm {
-   @media (max-width: #{$sm-max}) {
-       @content;
-   }
-}
+// // Small devices
+// @mixin sm {
+//    @media (max-width: #{$sm-max}) {
+//        @content;
+//    }
+// }
 
-// Medium devices
-@mixin md {
-   @media (max-width: #{$md-max}) {
-       @content;
-   }
-}
+// // Medium devices
+// @mixin md {
+//    @media (max-width: #{$md-max}) {
+//        @content;
+//    }
+// }
 
-// Large devices
-@mixin lg {
-   @media (max-width: #{$lg-max}) {
-       @content;
-   }
-}
+// // Large devices
+// @mixin lg {
+//    @media (max-width: #{$lg-max}) {
+//        @content;
+//    }
+// }
 
-// Extra large devices
-@mixin xl {
-   @media (max-width: #{$xl-max}) {
-       @content;
-   }
-}
+// // Extra large devices
+// @mixin xl {
+//    @media (max-width: #{$xl-max}) {
+//        @content;
+//    }
+// }
 
-// Custom devices
-@mixin rwd($screen) {
-   @media (max-width: $screen+'px') {
-       @content;
-   }
-}
+// // Custom devices
+// @mixin rwd($screen) {
+//    @media (max-width: $screen+'px') {
+//        @content;
+//    }
+// }

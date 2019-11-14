@@ -98,5 +98,3 @@ $(function() {
         slider.trigger('prev.owl.carousel');
     })
 });
-
-
