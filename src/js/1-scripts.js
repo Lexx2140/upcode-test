@@ -71,6 +71,10 @@ window.onscroll = (e) => {
 
     // Apply darker header background
     header.classList.toggle('darken', (scrollTop > header.clientHeight));
+
+
+    // // Stop video player
+    // var videoPlayer =
 }
 
 

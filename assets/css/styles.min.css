@@ -546,7 +546,20 @@ header > div {
 }
 
 .slider-item.video {
-  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-item.video .yt-player {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: auto;
 }
 
 .owl-carousel .owl-dots {
