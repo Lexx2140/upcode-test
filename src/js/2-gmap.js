@@ -173,7 +173,7 @@ var initMap = (shortcut) => {
     let myMap = new google.maps.Map(mapContainer, opts);
 
     // Set marker image
-    let image = '/assets/img/marker.svg';
+    let image = window.location + 'assets/img/marker.svg';
 
     // Set marker
     let myMarker = new google.maps.Marker({
